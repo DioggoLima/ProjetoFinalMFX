@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/acesso.css">
+  <title>Sonne Stay</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+ 
+    <!-- Isso daqui é pra importar o Litepicker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+
+</head>
+
+<body>
+  <header>
+
+    <nav class="navegar">
+      <div class="menu-toggle" id="menu-toggle">
+        &#9776; <!-- Ícone de hambúrguer -->
+      </div>
+
+      <ul class="menu">
+        <li class="menu-link"><a href="index.html" class="nav-link">INÍCIO</a></li>
+        <li class="menu-link"><a href="hotel2.html" class="nav-link">O HOTEL</a></li>
+        <li class="menu-link"><a href="quarto.html" class="nav-link">ACOMODAÇÕES</a></li>
+        <li class="menu-link"><a href="contato.html" class="nav-link">CONTATO</a></li>
+      </ul>
+
+      <div class="button-menu">
+        <img src="img/Bandeira Brasil.svg" class="img" alt="Bandeira Brasil para cotação da moeda">
+        <li class="textPrice">BRL</li>
+        <li class="menu-link"><a href="paginaLogin/Cadastro/Login/login.html" class="nav-link">Entrar</a></li>
+        <li class="menu-link"><a href="paginaLogin/Cadastro/create.html" class="nav-link">Cadastrar</a></li>
+      </div>
+      <div class="index">
+        <img src="img/Logo 1.svg" class="index-link" alt="Logotipo com um sol amarelo, fundo laranja e um coqueiro">
+        <h1 class="title">Sonne Stay</h1>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="textPage">
+      <h2>Conheça um local <br> ideal para sua viagem</h2>
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+
+    <div class="barAirbnb">
+      <div class="bar">
+        <div class="location">
+          <p>Destino</p>
+          <input type="text" id="destino" placeholder="Onde você vai?">
+        </div>
+        <div class="location">
+          <p>Check in</p>
+          <input type="text" id="checkin" placeholder="Data de Entrada">
+        </div>
+        <div class="location">
+          <p>Check out</p>
+          <input type="text" id="checkout" placeholder="Data de Saída">
+        </div>
+        <div class="location">
+          <p>Pessoas</p>
+          <input type="number" id="pessoas" placeholder="Numero de Hospedes">
+          <span><i class="lni lni-search-alt"></i></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="boxRooms">
+    <!-- <div class="blockBackground">
+      <div class="blockRoom01">
+        <img class="room01" src="img/quarto1.png" alt="">
+        <p class="textRoom01">Quartos confortáveis e aconchegantes <br>
+          para sua estadia nas melhores praias, <br> com vista para o mar</p>
+        <button class="buttonRoom01">Veja nossos quartos</button>
+      </div>
+    </div> -->
+
+    <div>
+      <div class="pictureRoom01">
+        <img class="imgRoom01" src="img/room01.png" alt="">
+        <div class="infoRoom01">
+          <h2>Praia do Sol, Brasil</h2>
+          <p>Quarto aconchegante pé na areia <br> Relaxe em um quarto confortável localizado na melhor faixa de areia da
+            cidade</p>
+          <div class="buttonReserva">
+            <button class="buttonReservaStyle" data-id="1">Reserve Já</button>
+          </div>
+        </div>
+      </div>
+      <div class="pictureRoom02">
+        <img class="imgRoom01" src="img/room02.png" alt="">
+        <div class="infoRoom01">
+          <h2>Praia Bonita, Brasil</h2>
+          <p>Quarto para sua familia curtir as férias<br> Relaxe em um quarto confortável localizado na melhor faixa de
+            areia da cidade</p>
+          <div class="buttonReserva">
+            <button class="buttonReservaStyle" data-id="2">Reserve Já</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="suite">
+    <div class="suite_img">
+      <img src="img/quarto1.png" alt="Imagem da suíte">
+    </div>
+    <div class="suite_content">
+      <h2>Quartos confortáveis e aconchegantes</h2>
+      <p>
+        Desfrute de uma estadia inesquecível nas melhores praias do Brasil, com vista para o mar e todo o conforto que
+        você merece. Nossos quartos são projetados para proporcionar o máximo de relaxamento e bem-estar.
+      </p>
+      <ul class="suite_lista">
+        <li>
+          <i class="fas fa-check text-green-500 mr-3"></i>
+          <span>Café da manhã incluso</span>
+        </li>
+        <li>
+          <i class="fas fa-check text-green-500 mr-3"></i>
+          <span>Wi-Fi de alta velocidade</span>
+        </li>
+        <li>
+          <i class="fas fa-check text-green-500 mr-3"></i>
+          <span>Serviço de quarto 24 horas</span>
+        </li>
+        <li>
+          <i class="fas fa-check text-green-500 mr-3"></i>
+          <span>Acesso direto à praia</span>
+        </li>
+      </ul>
+      <a class="suite_botao" href="quarto.html">Veja nossos quartos</a>
+    </div>
+  </section>
+
+  <section class="comentario">
+    <div class="comentario_img">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+    </div>
+    <h2>O que nossos hóspedes dizem</h2>
+    <div class="comentario_content">
+      <h4>Ana Silva</h4>
+      <div class="comentario_avaliacao_1">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="comentario_texto">
+        "Experiência incrível! O quarto era exatamente como nas fotos, a equipe foi super atenciosa e a localização é perfeita. Voltarei com certeza!"
+      </p>
+    </div>
+    <div class="comentario_img">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+    </div>
+    <h2>O que nossos hóspedes dizem</h2>
+    <div class="comentario_content">
+      <h4>Edson</h4>
+      <div class="comentario_avaliacao_2">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="comentario_texto">
+        "Experiência incrível! O quarto era exatamente como nas fotos, a equipe foi super atenciosa e a localização é perfeita. Voltarei com certeza!"
+      </p>
+    </div>
+    <div class="comentario_img">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+    </div>
+    <h2>O que nossos hóspedes dizem</h2>
+    <div class="comentario_content">
+      <h4>Flavia</h4>
+      <div class="comentario_avaliacao_3">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p class="comentario_texto">
+        "Experiência incrível! O quarto era exatamente como nas fotos, a equipe foi super atenciosa e a localização é perfeita. Voltarei com certeza!"
+      </p>
+    </div>
+
+  </section>
+
+  <footer class="rodape">
+    <h3 class="ajuste">Sonne Stay&copy;</h3>
+  </footer>
+
+  <script src="js/acesso.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Sonne Stay</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header>
+        <nav class="navegar">
+            <!-- Botão de menu para dispositivos móveis -->
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </div>
+
+            <!-- Menu principal -->
+            <ul class="menu">
+                <li class="menu-link"><a href="index.html" class="nav-link">INÍCIO</a></li>
+                <li class="menu-link"><a href="hotel2.html" class="nav-link">O HOTEL</a></li>
+                <li class="menu-link"><a href="quarto.html" class="nav-link">ACOMODAÇÕES</a></li>
+                <li class="menu-link"><a href="contato.html" class="nav-link">CONTATO</a></li>
+            </ul>
+
+            <!-- Menu de botões à direita -->
+            <div class="button-menu">
+                <img src="img/Bandeira Brasil.svg" class="img" alt="Bandeira Brasil para cotação da moeda">
+                <li class="textPrice">BRL</li>
+                <li class="menu-link"><a href="paginaLogin/Cadastro/Login/login.html" class="nav-link">Entrar</a></li>
+                <li class="menu-link"><a href="paginaLogin/Cadastro/create.html" class="nav-link">Cadastrar</a></li>
+            </div>
+
+            <!-- Logo e título -->
+            <div class="index">
+                <img src="img/Logo 1.svg" class="index-link"
+                    alt="Logotipo com um sol amarelo, fundo laranja e um coqueiro">
+                <h1>Sonne Stay</h1>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Container principal do carrossel -->
+    <main class="container">
+        <!-- Lista de slides -->
+        <div class="list">
+            <!-- Slide 1 -->
+            <div class="item active" data-index="0">
+                <img src="img/Designer.jpeg" class="item-image" alt="Um lugar paradisíaco">
+                <div class="content">
+                    <h2 class="title">Um lugar paradisíaco</h2>
+                    <p class="descricao">Um verdadeiro paraíso não se define apenas por sua beleza, mas pela excelência em cada detalhe. No Sonne Stay, combinamos paisagens deslumbrantes com um serviço impecável, acomodações sofisticadas e uma gastronomia de classe mundial. Prepare-se para viver uma experiência exclusiva, onde seu único trabalho será relaxar e desfrutar.</p>
+                    <div class="buttons">
+                        <button><a href="hotel2.html" class="cad">Saiba mais</a></button>
+                        <button><a href="acesso.html" class="cad">Reserve já</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="item" data-index="1">
+                <img src="img/Designer (1).jpeg" class="item-image" alt="O lugar dos seus sonhos">
+                <div class="content">
+                    <h2 class="title">O lugar dos seus sonhos</h2>
+                    <p class="descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis provident
+                        ipsa
+                        aut distinctio accusantium consectetur sit magni voluptatibus illum alias, animi voluptate
+                        inventore, iste minus soluta aspernatur quae doloremque laboriosam!</p>
+                    <div class="buttons">
+                        <button>Saiba mais</button>
+                        <button>Acessar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="item" data-index="2">
+                <img src="img/Designer (2).jpeg" class="item-image" alt="Um lugar inexplicável">
+                <div class="content">
+                    <h2 class="title">Um lugar inexplicável</h2>
+                    <p class="descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis provident
+                        ipsa
+                        aut distinctio accusantium consectetur sit magni voluptatibus illum alias, animi voluptate
+                        inventore, iste minus soluta aspernatur quae doloremque laboriosam!</p>
+                    <div class="buttons">
+                        <button>Saiba mais</button>
+                        <button>Acessar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="item" data-index="3">
+                <img src="img/Designer (3).jpeg" class="item-image" alt="Um lugar formidável">
+                <div class="content">
+                    <h2 class="title">Um lugar formidável</h2>
+                    <p class="descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis provident
+                        ipsa
+                        aut distinctio accusantium consectetur sit magni voluptatibus illum alias, animi voluptate
+                        inventore, iste minus soluta aspernatur quae doloremque laboriosam!</p>
+                    <div class="buttons">
+                        <button>Saiba mais</button>
+                        <button>Acessar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Miniaturas de navegação -->
+        <div class="thumb">
+            <!-- Miniatura 1 -->
+            <div class="thumb-item active" data-index="0">
+                <img src="img/Designer.jpeg" alt="Um lugar paradisíaco">
+                <div class="conteudo">
+                    <h3>Um lugar paradisíaco</h3>
+                    <p>Venha viver essa experiência</p>
+                </div>
+            </div>
+
+            <!-- Miniatura 2 -->
+            <div class="thumb-item" data-index="1">
+                <img src="img/Designer (1).jpeg" alt="O lugar dos seus sonhos">
+                <div class="conteudo">
+                    <h3>O lugar dos seus sonhos</h3>
+                    <p>Uma experiência única</p>
+                </div>
+            </div>
+
+            <!-- Miniatura 3 -->
+            <div class="thumb-item" data-index="2">
+                <img src="img/Designer (2).jpeg" alt="Um lugar inexplicável">
+                <div class="conteudo">
+                    <h3>Um lugar inexplicável</h3>
+                    <p>Experiências jamais vividas antes</p>
+                </div>
+            </div>
+
+            <!-- Miniatura 4 -->
+            <div class="thumb-item" data-index="3">
+                <img src="img/Designer (3).jpeg" alt="Um lugar formidável">
+                <div class="conteudo">
+                    <h3>Um lugar formidável</h3>
+                    <p>Venha ter a melhor experiência da sua vida</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="arrows">
+            <button class="back">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
