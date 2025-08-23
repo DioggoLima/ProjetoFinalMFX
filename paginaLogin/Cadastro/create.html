@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+
+  <link rel="stylesheet" href="create.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+
+</head>
+
+<body>
+
+  <img class="imageBackground" src="../../img/Background Login (2).png" alt="">
+
+
+  <section class="register">
+
+    <div class="logo1">
+      <img src="../../img/Logo 1.svg" alt="">
+    </div>
+
+    <div id="returnPage">
+      <a href="../../index.html"><i class="fa-solid fa-left-long fa-2x"></i></a>
+    </div>
+    
+    <div class="text1">
+      <h2>Criar Conta</h2>
+    </div>
+
+
+    <div class="forms">
+      <form action="">
+        <label class="profilePicture" for="foto-perfil" class="customFotoPerfil">Adicione sua foto</label>
+        <input type="file" id="foto-perfil" name="foto perfil">
+
+        <br>
+
+        <label for="name"></label>
+        <input class="inputName" type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+
+        <br>
+
+        <label for="email"></label>
+        <input class="inputEmail" type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+        <br>
+
+        <label for="senha"></label>
+        <input class="inputPassword" type="password" id="senha" name="senha" placeholder=" Senha" required>
+
+        <br>
+
+        <label for="dataNascimento"></label>
+        <input class="inputDate" type="date" id="dataNascimento" name="dataNascimento">
+
+        <br>
+
+        <div class="gen">
+          <label>Genero:</label>
+          <input type="radio" id="masculino" name="genero" value="masculino">
+          <label for="masculino">Masculino</label>
+          <input type="radio" id="feminino" name="genero" value="feminino">
+          <label for="feminino">Feminino</label>
+        </div>
+        
+
+          <div class="buttonForm">
+            <button class="buttonStyle" type="submit">Enviar</button>
+          </div>
+
+
+      </form>
+
+      
+    </div>
+
+
+
+
+
+
+  </section>
+  <script src="https://kit.fontawesome.com/bd47bbad40.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

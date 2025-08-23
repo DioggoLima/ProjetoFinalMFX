@@ -1,0 +1,483 @@
+/* Reset básico para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo base do corpo da página */
+body {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+/* Barra de navegação fixa no topo */
+.navegar {
+    position: fixed;
+    top: 0;
+    background: rgba(139, 171, 243, 0.3);
+    width: 100%;
+    z-index: 100;
+    padding: 2rem 1.5rem 0rem 0;
+}
+
+/* Menu principal centralizado */
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+/* Botão de menu hambúrguer (oculto por padrão) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Estilo dos links do menu */
+.menu-link {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: 0.3s;
+    margin-top: -2px;
+}
+
+/* Efeito de sublinhado nos links do menu */
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #f12711, #f5af19);
+    transition: width 0.5s ease;
+}
+
+/* Animação do sublinhado ao passar o mouse */
+.menu-link:hover::after {
+    width: 100%;
+}
+
+/* Menu de botões à direita */
+.button-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    text-decoration: none;
+    gap: 7px;
+    margin-top: -32px;
+}
+
+/* Estilo dos links de navegação */
+.nav-link {
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 3px;
+    transition: 0.3s;
+}
+
+/* Estilo do texto de preço */
+.textPrice {
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding: 8px 0;
+    transition: 0.3s;
+}
+
+/* Ajuste da imagem da bandeira */
+.img {
+    margin-right: 1px;
+}
+
+/* Container do logo e título */
+.index {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: -70px;
+}
+
+/* Estilo do título principal */
+.index h1 {
+    font-size: 20px;
+    margin-top: 0px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Tamanho do logo */
+.index-link {
+    width: 5rem;
+}
+
+/* Container principal do carrossel */
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Lista de slides do carrossel */
+.list {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Cada item do carrossel */
+.item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* Item ativo do carrossel */
+.item.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Imagem de fundo do slide */
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+/* Container do conteúdo de texto */
+.content {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    padding-right: 30%;
+    width: 80%;
+    color: white;
+    z-index: 3;
+}
+
+/* Título do slide */
+.title {
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+}
+
+/* Descrição do slide */
+.descricao {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+}
+
+/* Container dos botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+}
+
+/* Estilo dos botões */
+.buttons button {
+    border: none;
+    background-color: white;
+    letter-spacing: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cad {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Efeito hover nos botões */
+.buttons button:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: 0.7s;
+}
+
+/* Estilo do segundo botão */
+.buttons button:nth-child(2) {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Efeito hover no segundo botão */
+.buttons button:nth-child(2):hover {
+    background-color: white;
+    color: black;
+}
+
+/* Container das miniaturas */
+.thumb {
+    position: absolute;
+    bottom: 50px;
+    left: 70%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+/* Cada miniatura */
+.thumb-item {
+    width: 135px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover nas miniaturas */
+.thumb-item:hover {
+    transform: scale(1.05);
+}
+
+/* Miniatura ativa */
+.thumb-item.active {
+    border: 2px solid white;
+    border-radius: 10px
+}
+
+/* Imagem da miniatura */
+.thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+/* Conteúdo de texto da miniatura */
+.conteudo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Título da miniatura */
+.conteudo h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Descrição da miniatura */
+.conteudo p {
+    font-size: 12px;
+}
+
+/* Container das setas de navegação */
+.arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 50px;
+    left: 140px;
+    z-index: 10;
+}
+
+/* Estilo dos botões de navegação */
+.arrows button {
+    border-radius: 15px;
+    border: none;
+    padding: 11px 17px;
+    background-color: rgb(163, 163, 163);
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+/* Efeito hover nos botões de navegação */
+.arrows button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.7s;
+}
+
+/* Animações para entrada de conteúdo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showTitle {
+    from {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showDescricao {
+    from {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showButtons {
+    from {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes effectThumb {
+    from {
+        transform: translateX(-50%) translateX(150px);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes effectThumbLast {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 135px;
+        opacity: 1;
+    }
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes hideImage {
+    to {
+        width: 135px;
+        height: 200px;
+        border-radius: 10px;
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
+/* Aplicando animações aos elementos */
+.item.active .title {
+    animation: showTitle 0.5s linear 1 forwards;
+    animation-delay: 1.2s;
+}
+
+.item.active .descricao {
+    animation: showDescricao 0.5s linear 1 forwards;
+    animation-delay: 1.6s;
+}
+
+.item.active .buttons {
+    animation: showButtons 0.5s linear 1 forwards;
+    animation-delay: 2s;
+}
+
+.thumb {
+    animation: effectThumb 0.5s linear 1 forwards;
+}
+
+.thumb-item:nth-last-child(1) {
+    animation: effectThumbLast 0.5s linear 1 forwards;
+}
+
+.item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+.list .item:not(.active) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: hideImage 0.5s linear 1 forwards;
+    z-index: 1;
+}

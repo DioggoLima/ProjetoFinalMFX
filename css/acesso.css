@@ -1,0 +1,1168 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(../img/openart-9f699c7f96f3400182301cffc4b85062_raw.png);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  height: 60vh;
+}
+
+.navegar {
+  position: fixed;
+  top: 0;
+  background: rgba(139, 171, 243, 0.3);
+  width: 100%;
+  z-index: 100;
+  padding: 2rem 1.5rem 0rem 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-link {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+
+.menu-link::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #f12711, #f5af19);
+  transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+.button-menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  text-decoration: none;
+  gap: 7px;
+  margin-top: -30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 3px;
+  transition: 0.3s;
+}
+
+.textPrice {
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.img {
+  margin-right: 1px;
+}
+
+.index {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: -70px;
+}
+
+.index h1 {
+    font-size: 20px;
+}
+
+.index-link {
+  width: 5rem;
+}
+
+.textPage {
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -15rem;
+  margin-left: 30px;
+  font-size: 50px;
+}
+
+.barAirbnb {
+  margin-top: 30rem;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barAirbnb p {
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+  color: #777;
+  padding-top: 25px;
+}
+
+.bar {
+  position: absolute;
+  width: 70%;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 5px hsl(0 0% 78%);
+  height: 75px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.6rem;
+  margin: 20px auto 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bar div {
+  border-radius: inherit;
+  padding: 0.8rem 1.5rem;
+  transition: background 250ms ease;
+}
+
+.bar div:hover {
+  background: hsl(0 0% 85%);
+}
+
+.location {
+  width: 25%;
+}
+
+.location span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #005ac7;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  border-radius: 100%;
+  transform-origin: center;
+}
+
+input[type="text"] {
+  background: none;
+  border: none;
+  padding: 0.2rem 0 0 0;
+  cursor: pointer;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-size: 0.75rem;
+}
+
+
+.location span:hover {
+  transform: translateY(-50%) scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.lni-search-alt {
+  background-color: #005ac7;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* 
+section {
+  width: 100%;
+}
+
+
+.blockRoom01 {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin: 35px;
+}
+
+.room01 {
+  position: absolute;
+  margin: 10px;
+  margin-top: 50rem;
+  width: 32rem;
+  height: 31rem;
+  margin-left: -10px;
+}
+
+.textRoom01 {
+  position: absolute;
+  margin: 8px;
+  margin-top: 57rem;
+  font-size: 25px;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+.buttonRoom01 {
+  position: absolute;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 2.8rem;
+  margin-top: 75.5rem;
+  margin-left: 150px;
+  background-color: #005ac7;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.buttonRoom01:hover {
+  background-color: #0048a0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.boxRooms {
+  margin-top: -500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.pictureRoom01 {
+  position: relative;
+  margin-top: 51rem;
+  margin-left: 58.5rem;
+  margin-right: 10px;
+  padding: none;
+}
+
+.pictureRoom02 {
+  position: relative;
+  margin-top: -26.3rem;
+  margin-left: 33rem;
+  padding: none;
+}
+
+.imgRoom01 {
+  width: 40rem;
+  display: flex;
+  padding: 0;
+  margin: none;
+}
+
+.infoRoom01 {
+  position: relative;
+  width: 25rem;
+  height: 11.2rem;
+  background-color: white;
+  border-radius: 0px 0px 25px 25px;
+  margin: none;
+  padding: none;
+  color: black;
+  box-shadow: 6px 6px 15px #777;
+}
+
+.infoRoom1,
+h2,
+p {
+  margin-left: 1rem;
+}
+
+
+.buttonReserva {
+  margin-left: 1rem;
+  padding-top: 35px;
+  border-radius: 1rem;
+}
+
+.buttonReservaStyle {
+  height: 2.5rem;
+  width: 6.5rem;
+  background-color: #3F9EE2;
+  color: whitesmoke;
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+}
+
+.buttonReservaStyle:hover {
+  background-color: #0048a0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+} */
+section {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.blockRoom01 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.room01 {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.textRoom01 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.buttonRoom01 {
+  width: 20rem;
+  height: 2.8rem;
+  background-color: #005ac7;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: 30px auto;
+  display: block;
+}
+
+.buttonRoom01:hover {
+  background-color: #0048a0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.boxRooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.pictureRoom01 {
+  position: relative;
+  top: 15rem;
+  left: 0rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pictureRoom02 {
+  position: relative;
+  bottom: 10rem;
+  left: 44rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pictureRoom01 {
+  margin: 0;
+}
+
+.pictureRoom02 {
+  margin: 0;
+}
+
+.imgRoom01 {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 25px 25px 0 0;
+}
+
+.infoRoom01 {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  border-radius: 0 0 25px 25px;
+  padding: 20px;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.infoRoom1 h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.infoRoom1 p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+h2, p {
+  margin-left: 0;
+}
+
+.buttonReserva {
+  margin-left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.buttonReservaStyle {
+  height: 2.5rem;
+  width: 8rem;
+  background-color: #3F9EE2;
+  color: whitesmoke;
+  font-family: "Figtree", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+}
+
+.buttonReservaStyle:hover {
+  background-color: #0048a0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adicionando estilos para as tags e avaliações */
+.pictureRoom01::before,
+.pictureRoom02::before {
+  content: "Popular";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #FFA500;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.pictureRoom02::before {
+  content: "Família";
+  background-color: #22c55e;
+}
+
+/* Estilo para as avaliações */
+.infoRoom01::after {
+  content: "★ 4.9";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #FFA500;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Estilo para preços */
+.buttonReserva::before {
+  content: "A partir de";
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.buttonReserva::after {
+  content: "R$ 450/noite";
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+/* 
+.suite {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.suite img {
+  width: 550px;
+  height: 350px;
+  margin: 80px 25px;
+}
+
+.suite_content {
+  color: #777;
+  line-height: 2;
+  margin: 70px 0px 0px 0px;
+}
+
+.suite_content h2 {
+  color: black;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.suite_content p {
+  margin-right: 20px;
+  color: black;
+}
+
+.suite_lista {
+    list-style: none;
+    padding: 0;
+    color: black;
+}
+.suite_lista li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+.suite_lista li::before {
+    content: '✔'; /* Este é o checkmark */
+    /* color: green; Cor do ícone */
+    /* position: absolute;
+    left: 0;
+    top: 0;
+}  */
+
+.suite {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+.suite img {
+  width: 550px;
+  height: 350px;
+  margin: 80px 25px;
+}
+
+.suite_content {
+  width: 100%;
+  color: #777;
+  line-height: 2;
+  margin: 70px 0px 0px 0px;
+}
+
+.suite_content h2 {
+  color: black;
+  font-size: 30px;
+  margin-right: 25px;
+}
+
+.suite_content p {
+  margin-right: 20px;
+  font-size: 14px;
+  color: black;
+  display: inline-block; /* Define como bloco alinhado */
+  vertical-align: top; /* Alinha ao topo */
+}
+
+.suite_lista {
+  list-style: none;
+  padding: 0;
+  color: black;
+  display: inline-block; /* Define como bloco alinhado */
+  vertical-align: top; /* Alinha ao topo */
+}
+
+.suite_lista li {
+  position: relative;
+  font-size: 18px;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.suite_lista li::before {
+  content: '✔'; /* Este é o checkmark */
+  color: green; /* Cor do ícone */
+  position: absolute;
+  left: 1px;
+  top: 0;
+}
+
+/* Estilo do botão */
+/* .suite button {
+  margin-top: 12rem;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(29, 29, 255);
+  border: 1px solid rgb(29, 29, 255);
+  padding: 10px 200px;
+  margin-left: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona suavidade no efeito */
+ 
+
+.suite_botao {
+  display: inline-block; /* Torna o link semelhante a um botão */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 0rem;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(29, 29, 255);
+  border: 1px solid rgb(29, 29, 255);
+  padding: 8px 200px;
+  margin-left: 60px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none; /* Remove sublinhado padrão do link */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza transições */
+}
+
+/* Efeito hover no botão */
+.suite_botao:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black; /* Muda a cor do texto ao passar o mouse */
+}
+
+.comentario {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+/* Título principal centralizado */
+.comentario h2:first-of-type {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Esconder os títulos repetidos */
+.comentario h2:not(:first-of-type) {
+  display: none;
+}
+
+/* Container para os cartões de depoimentos */
+.comentario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+/* Estilo para cada cartão de depoimento */
+.comentario_content {
+  width: 30%;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Esconder todas as imagens originais */
+.comentario_img {
+  display: none;
+}
+
+
+
+/* Nome do cliente */
+.comentario_content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2d3748;
+  text-align: center;
+}
+
+
+/* Texto do depoimento */
+.comentario_texto {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a5568;
+  font-style: italic;
+  text-align: center;
+}
+
+.rodape {
+  animation: gradient 5s ease-in-out infinite;
+  position:static;
+  margin-top: 5rem;
+  background: linear-gradient(-45deg, #f12711, #f5af19);
+  background-size: 250% 250%;
+  opacity: 0.7;
+  width: 100%;
+  height: 80px;
+}
+
+.ajuste {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: left;
+  margin-left: 35px;
+  padding-top: 25px;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0 50%;
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+  .content {
+    flex-basis: calc(33.33% - 10px);
+    /* 3 cards por linha em telas menores */
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-basis: calc(50% - 10px);
+    /* 2 cards por linha em telas menores */
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  .index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -65px;
+    margin-left: -3px;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .textPrice {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: 233px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .nav-link {
+    margin-left: -5px;
+  }
+
+  .menu-link::after {
+    content: '';
+    margin-left: 190px;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #f12711, #f5af19);
+    transition: width 0.5s ease;
+  }
+
+  .menu-link:hover::after {
+    width: 0px;
+  }
+
+  .textPage {
+    padding-top: 150px;
+  }
+
+  .barAirbnb {
+    display: flex;
+    align-items: center;
+    padding-top: 25rem;
+  }
+
+  .bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+  }
+  
+  .bar div:hover {
+    background: hsl(0 0% 100%);
+  }
+
+  .location {
+   margin-right: 0rem;
+   margin-top: -20px;
+  }
+  
+  span {
+    margin-top: 0rem;
+    margin-right: 0rem;
+  }
+
+  .room01 {
+    display: flex;
+    align-items: center;
+    width: 24rem;
+    height: 23rem;
+  }
+
+  .textRoom01 {
+    font-size: 20px;
+    margin-left: 6rem;
+    text-align: center;
+    margin-top: 53rem;
+    position: absolute;
+  }
+
+  .buttonRoom01 {
+    margin-left: 48px;
+    width: 16rem;
+    height: 2.3rem;
+    font-size: 16px;
+    margin-top: 68rem;
+  }
+
+  .boxRooms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .pictureRoom01{
+    margin-left: 1.1rem;
+    margin-top: 0rem;
+  }
+
+  .pictureRoom02 {
+    margin-left: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .buttonReserva {
+    margin-top: -2.5rem;
+    margin-left: 12rem;
+  }
+
+  .blockRoom01 {
+    margin-right: 24rem;
+    margin-top: 0rem;
+  }
+
+  .imgRoom01 {
+    width: 20rem;
+  }
+
+  .infoRoom01 {
+    width: 20rem;
+    height: 9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-basis: calc(100% - 10px);
+    /* 1 card por linha em telas menores */
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  .index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -65px;
+    margin-left: -3px;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .textPrice {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: 233px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .nav-link {
+    margin-left: -5px;
+  }
+
+  .menu-link::after {
+    content: '';
+    margin-left: 190px;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #f12711, #f5af19);
+    transition: width 0.5s ease;
+  }
+
+  .menu-link:hover::after {
+    width: 0px;
+  }
+
+  .textPage {
+    padding-top: 150px;
+  }
+
+  .barAirbnb {
+    display: flex;
+    align-items: center;
+    padding-top: 25rem;
+  }
+
+  .bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 80px;
+  }
+  
+  .bar div:hover {
+    background: hsl(0 0% 100%);
+  }
+
+  .location {
+   margin-right: 4rem;
+   margin-top: -4px;
+  }
+  
+  span {
+    margin-top: 0rem;
+    margin-right: 0rem;
+  }
+
+  .room01 {
+    display: flex;
+    align-items: center;
+    width: 24rem;
+    height: 23rem;
+  }
+
+  .textRoom01 {
+    font-size: 20px;
+    margin-left: 6rem;
+    text-align: center;
+    margin-top: 53rem;
+    position: absolute;
+  }
+
+  .buttonRoom01 {
+    margin-left: 48px;
+    width: 16rem;
+    height: 2.3rem;
+    font-size: 16px;
+    margin-top: 68rem;
+  }
+
+  .boxRooms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .pictureRoom01{
+    margin-left: 1.1rem;
+    margin-top: 0rem;
+  }
+
+  .pictureRoom02 {
+    margin-left: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .buttonReserva {
+    margin-top: -2.5rem;
+    margin-left: 12rem;
+  }
+
+  .blockRoom01 {
+    margin-right: 24rem;
+    margin-top: 0rem;
+  }
+
+  .imgRoom01 {
+    width: 20rem;
+  }
+
+  .infoRoom01 {
+    width: 20rem;
+    height: 9rem;
+  }
+}
+
+
+/* =================================================================== */
+/* === ESTILOS PARA A BARRA DE BUSCA (Adicionar no final do CSS) === */
+/* =================================================================== */
+
+/* 1. Removemos os estilos padrão dos inputs de data e número */
+
+/* Esconde o ícone de calendário (Chrome, Safari, Edge) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/* Esconde as setas de incremento/decremento (Chrome, Safari, Edge) */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* 2. Criamos um estilo unificado para TODOS os inputs dentro da barra */
+/* Esta regra vai sobrescrever a sua regra antiga que só pegava `input[type="text"]` */
+
+.bar input {
+    /* Removemos qualquer aparência padrão */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Estilos para deixar o campo "limpo" */
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 5px; /* Ajuste para alinhar com o <p> acima */
+    width: 100%;
+    
+    /* Estilos de texto */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; /* Tamanho um pouco maior para facilitar a leitura */
+    color: #333; /* Cor do texto quando o usuário digita */
+    cursor: pointer;
+}
+
+/* Remove a borda azul que aparece ao clicar no input */
+.bar input:focus {
+    outline: none;
+}
+
+/* Melhoramos um pouco o estilo do placeholder */
+.bar input::placeholder {
+    font-size: 14px;
+    color: #999; /* Cor um pouco mais clara que a padrão */
+}

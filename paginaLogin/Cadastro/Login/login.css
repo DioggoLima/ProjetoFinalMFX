@@ -1,0 +1,154 @@
+* {
+  font-family: "Figtree", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 5vh;
+  height: 100vh; 
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.imageBackground {
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(0.6) opacity(1);
+}
+
+
+.register {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 650px;
+  /* background-color: #f5eac6; */
+  background-color: white;
+  border-radius: 50px;
+}
+
+#returnPage {
+  margin-bottom: 37rem;
+  padding-right: 37rem;
+  text-decoration: none;
+  color: black;
+}
+
+#returnPage:hover {
+ 
+  transform: scale(1.02);
+  cursor: pointer; 
+  transition: all 0.3s ease-in-out; 
+}
+
+#returnPage a {
+  color: black;
+}
+
+.logo1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 450px;
+ 
+}
+
+
+.text1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  margin-top: 0px;
+  font-size: 28px;
+  padding-bottom: 230px;
+}
+
+.textQualFunção {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #7E7D7D;
+  padding-right: 450px;
+}
+
+
+.buttonCliente {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  font-size: 20px;
+  padding-top:100px;
+  z-index: 1;
+}
+
+.viajante {
+  position: relative;
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  text-align: start;
+  padding: 10px;
+  height: 60px;
+  width: 640px;
+  color: whitesmoke;
+  font-size: 18px;
+  background-color: #FF7038;
+  border-radius: 100px;
+  border: none;
+}
+
+.viajante:hover{
+  transform: scale(1.05);
+  cursor: pointer; 
+  transition: all 0.5s ease-in-out; 
+}
+
+.buttonAdm {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  margin-top: 0px;
+  font-size: 20px;
+  padding-top:240px;
+}
+
+
+.adm {
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  text-align: start;
+  padding: 10px;
+  height: 60px;
+  width: 640px;
+  color: whitesmoke;
+  font-size: 18px;
+  background-color: #FF7038;
+  border-radius: 100px;
+  border: none;
+}
+
+.adm:hover{
+  transform: scale(1.05);
+  cursor: pointer; 
+  transition: all 0.5s ease-in-out; 
+}
+
