@@ -25,7 +25,7 @@ body::before {
     z-index: -1; /* Joga o pseudo-elemento para trás do conteúdo */
 
     /* A imagem e o filtro são aplicados aqui */
-    background: url("../img/rowan-heuvel-U6t80TWJ1DM-unsplash.jpg") no-repeat
+    background: url("../img/rowan-heuvel-U6t80TWJ1DM-unsplash.webp") no-repeat
       center center;
     background-size: cover;
 
