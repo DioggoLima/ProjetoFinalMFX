@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
@@ -33,7 +34,7 @@
     <div id="returnPage">
       <a href="../../index.html"><i class="fa-solid fa-left-long fa-2x"></i></a>
     </div>
-    
+
     <div class="text1">
       <h2>Criar Conta</h2>
     </div>
@@ -41,11 +42,6 @@
 
     <div class="forms">
       <form action="">
-        <label class="profilePicture" for="foto-perfil" class="customFotoPerfil">Adicione sua foto</label>
-        <input type="file" id="foto-perfil" name="foto perfil">
-
-        <br>
-
         <label for="name"></label>
         <input class="inputName" type="text" id="nome" name="nome" placeholder="Nome Completo" required>
 
@@ -73,24 +69,63 @@
           <input type="radio" id="feminino" name="genero" value="feminino">
           <label for="feminino">Feminino</label>
         </div>
-        
 
-          <div class="buttonForm">
-            <button class="buttonStyle" type="submit">Enviar</button>
-          </div>
+
+        <div class="buttonForm">
+          <button class="buttonStyle" type="submit">Enviar</button>
+        </div>
 
 
       </form>
 
-      
+
     </div>
 
-
-
-
-
-
   </section>
+  <script>
+    document.querySelector('form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Pegando os dados do formulário
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+      // const dataNascimento = document.getElementById('dataNascimento').value;
+      const genero = document.querySelector('input[name="genero"]:checked')?.value;
+
+      // Montando o objeto para enviar
+      const userData = {
+        name: nome,
+        email: email,
+        password: senha,
+        // birthDate: dataNascimento,
+        gender: genero
+      };
+
+      try {
+        const response = await fetch('http://localhost:4000/v1/cadastro', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(userData)
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+          alert('Cadastro realizado com sucesso!');
+          window.location.href = '../../index.html';
+          // Redirecionar ou limpar formulário
+        } else {
+          alert('Erro ao cadastrar: ' + result.message);
+        }
+      } catch (err) {
+        alert('Erro de conexão com o servidor.');
+      }
+    });
+
+
+  </script>
   <script src="https://kit.fontawesome.com/bd47bbad40.js" crossorigin="anonymous"></script>
 </body>
 
