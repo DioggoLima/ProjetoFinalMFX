@@ -1,9 +1,10 @@
 // Animação de Scroll para os Cards
 const observer = new IntersectionObserver(
-  (entries) => {
+  (entries, obs) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+        obs.unobserve(entry.target); // Desconecta após animar
       }
     });
   },
