@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de quartos</title>
+    <link rel="stylesheet" href="gerenciador.css">
+    <script src="post.js" defer></script>
+    <script src="put.js" defer></script>
+    <script src="delete.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Gerenciador</h1>
+
+        <!-- Consulta de Produtos -->
+         <div style="display: flex; gap: 30px;" class="sla">
+             <div class="consult-section">
+                 <label for="search-products" class="consult-label">Consultar Quartos</label>
+                 <button id="search-products" class="consult-button"><a href="http://[::1]:4000/v1/quartos">Consultar</a></button>
+             </div>
+             <div class="consult-section">
+                <label for="search-products" class="consult-label">Página de Quartos</label>
+                <button id="search-products" class="consult-button"><a href="quarto.html">Abrir</a></button>
+            </div>
+         </div>
+
+        <!-- Seções de Adicionar, Editar e Deletar -->
+        <div class="form-sections">
+            <!-- Adicionar Produto -->
+            <div class="form-card-add">
+                <h2 class="form-title">Adicionar Quartos</h2>
+                <div class="form">
+                    <input type="text" placeholder="Nome do quarto" id="post-title" class="form-input">
+                    <input type="number" placeholder="Valor do quarto="post-price" class="form-input">
+                    <input type="url" placeholder="URL da imagem" id="post-url" class="form-input">
+                    <button type="submit" class="form-button" onclick="createPost()">Salvar quarto</button>
+                </div>
+            </div>
+
+            <!-- Editar Produto -->
+            <div class="form-card">
+                <h2 class="form-title">Editar Quartos</h2>
+                <div class="form">
+                    <input type="text" placeholder="ID do quarto" id="put-id" class="form-input">
+                    <input type="text" placeholder="Nome do quarto" id="put-title" class="form-input">
+                    <input type="text" placeholder="description" id="put-description" class="form-input">
+                    <input type="number" placeholder="Valor do quarto" id="put-price" class="form-input">
+                    <button type="submit" class="form-button" onclick="updatePost()">Editar quarto</button>
+                </div>
+            </div>
+
+            <!-- Deletar Produto -->
+            <div class="form-card-del">
+                <h2 class="form-title">Deletar Quartos</h2>
+                <div class="form">
+                    <input type="text" placeholder="ID do quarto" id="delete-id" class="form-input">
+                    <button type="submit" class="form-button" onclick="deletePost()">Excluir quarto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
